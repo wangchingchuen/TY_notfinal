@@ -1,0 +1,7 @@
+﻿.venv/
+__pycache__/
+*.pyc
+# secrets
+*API key*.txt
+*api_key*
+.env

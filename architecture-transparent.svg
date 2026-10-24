@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <defs>
+    <style>
+      .title { font: 700 34px 'Microsoft JhengHei', 'Noto Sans CJK TC', sans-serif; fill: #17324d; }
+      .label { font: 700 25px 'Microsoft JhengHei', 'Noto Sans CJK TC', sans-serif; fill: #17324d; }
+      .small { font: 20px 'Microsoft JhengHei', 'Noto Sans CJK TC', sans-serif; fill: #35536b; }
+      .note { font: 18px 'Microsoft JhengHei', 'Noto Sans CJK TC', sans-serif; fill: #496477; }
+      .box { stroke-width: 3; rx: 18; }
+      .arrow { fill: none; stroke: #52758d; stroke-width: 4; marker-end: url(#arrowhead); }
+      .dashed { fill: none; stroke: #8ba4b4; stroke-width: 3; stroke-dasharray: 10 9; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <polygon points="0 0, 12 4.5, 0 9" fill="#52758d"/>
+    </marker>
+  </defs>
+
+  <text x="800" y="64" text-anchor="middle" class="title">亂丟垃圾事件偵測：物件導向架構</text>
+
+  <rect x="610" y="105" width="380" height="105" class="box" fill="#dceeff" stroke="#4e89b8"/>
+  <text x="800" y="150" text-anchor="middle" class="label">main.py</text>
+  <text x="800" y="183" text-anchor="middle" class="small">程式入口：建立設定、啟動流程</text>
+
+  <rect x="130" y="270" width="330" height="120" class="box" fill="#fff2c9" stroke="#d4a72c"/>
+  <text x="295" y="315" text-anchor="middle" class="label">Config</text>
+  <text x="295" y="350" text-anchor="middle" class="small">模型路徑、閾值、裝置</text>
+  <text x="295" y="378" text-anchor="middle" class="note">資料物件</text>
+
+  <rect x="555" y="270" width="490" height="120" class="box" fill="#d9f3e3" stroke="#4c9b72"/>
+  <text x="800" y="315" text-anchor="middle" class="label">LitteringPipeline</text>
+  <text x="800" y="350" text-anchor="middle" class="small">安排資料夾、圖片與物件合作</text>
+  <text x="800" y="378" text-anchor="middle" class="note">流程協調者</text>
+
+  <rect x="1140" y="270" width="330" height="120" class="box" fill="#f5e1f1" stroke="#a55a98"/>
+  <text x="1305" y="315" text-anchor="middle" class="label">資料夾 / 圖片</text>
+  <text x="1305" y="350" text-anchor="middle" class="small">images_root</text>
+  <text x="1305" y="378" text-anchor="middle" class="note">輸入資料</text>
+
+  <rect x="170" y="520" width="330" height="125" class="box" fill="#e5f4ff" stroke="#4e89b8"/>
+  <text x="335" y="565" text-anchor="middle" class="label">TrashDetector</text>
+  <text x="335" y="600" text-anchor="middle" class="small">偵測垃圾框</text>
+  <text x="335" y="628" text-anchor="middle" class="note">繼承 BaseDetector</text>
+
+  <rect x="635" y="520" width="330" height="125" class="box" fill="#e5f4ff" stroke="#4e89b8"/>
+  <text x="800" y="565" text-anchor="middle" class="label">PersonVehicleDetector</text>
+  <text x="800" y="600" text-anchor="middle" class="small">偵測人與車框</text>
+  <text x="800" y="628" text-anchor="middle" class="note">繼承 BaseDetector</text>
+
+  <rect x="1100" y="520" width="330" height="125" class="box" fill="#ffe4d6" stroke="#c56b42"/>
+  <text x="1265" y="565" text-anchor="middle" class="label">LitteringMatcher</text>
+  <text x="1265" y="600" text-anchor="middle" class="small">判斷是否形成事件</text>
+  <text x="1265" y="628" text-anchor="middle" class="note">保存跨影格狀態</text>
+
+  <rect x="385" y="755" width="300" height="100" class="box" fill="#f2f6f8" stroke="#8299a8"/>
+  <text x="535" y="797" text-anchor="middle" class="label">Detection</text>
+  <text x="535" y="830" text-anchor="middle" class="small">模型輸出的偵測框</text>
+
+  <rect x="915" y="755" width="300" height="100" class="box" fill="#f2f6f8" stroke="#8299a8"/>
+  <text x="1065" y="797" text-anchor="middle" class="label">LitteringEvent</text>
+  <text x="1065" y="830" text-anchor="middle" class="small">一筆疑似違規事件</text>
+
+  <rect x="615" y="910" width="370" height="55" class="box" fill="#e1f0d4" stroke="#6c9d48"/>
+  <text x="800" y="946" text-anchor="middle" class="label">DataFrame → CSV</text>
+
+  <path d="M800 210 L800 270" class="arrow"/>
+  <path d="M610 210 L350 270" class="dashed"/>
+  <path d="M990 210 L1240 270" class="dashed"/>
+  <path d="M800 390 L335 520" class="arrow"/>
+  <path d="M800 390 L800 520" class="arrow"/>
+  <path d="M800 390 L1265 520" class="arrow"/>
+  <path d="M500 582 L635 582" class="arrow"/>
+  <path d="M965 582 L1100 582" class="arrow"/>
+  <path d="M335 645 L500 755" class="arrow"/>
+  <path d="M800 645 L570 755" class="arrow"/>
+  <path d="M800 645 L1010 755" class="arrow"/>
+  <path d="M1265 645 L1110 755" class="arrow"/>
+  <path d="M1065 855 L900 910" class="arrow"/>
+
+  <text x="45" y="930" class="note">透明背景：可直接放到簡報、文件或網頁上</text>
+</svg>

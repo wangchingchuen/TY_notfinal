@@ -1,0 +1,1 @@
+[{"bbox": [768, 238, 786, 249], "label": "paper"}, {"bbox": [541, 295, 554, 308], "label": "paper"}, {"bbox": [851, 256, 864, 265], "label": "paper"}, {"bbox": [786, 572, 800, 586], "label": "plastic"}, {"bbox": [503, 535, 525, 556], "label": "trash"}, {"bbox": [501, 700, 518, 716], "label": "trash"}, {"bbox": [439, 680, 465, 705], "label": "trash"}]

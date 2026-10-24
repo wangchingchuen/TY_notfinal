@@ -1,0 +1,9 @@
+```json
+[
+  {"bbox": [737, 595, 772, 618], "label": "plastic bottle"},
+  {"bbox": [710, 128, 721, 139], "label": "paper"},
+  {"bbox": [782, 166, 793, 176], "label": "paper"},
+  {"bbox": [514, 405, 553, 434], "label": "paper debris"},
+  {"bbox": [528, 328, 568, 348], "label": "debris"}
+]
+```
